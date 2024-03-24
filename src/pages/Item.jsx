@@ -20,8 +20,8 @@ export default function Item() {
             </div>
             <section style={{ display: "flex", alignItems: "center" }}>
                 <h3 style={{ fontWeight: "100", marginRight: "16px" }}>{item.name}</h3>
-                <Link to={`/itens/${item.id}/edit`}><button className="greenButton"><img src="/src/img/editIcon.svg" alt="" /><span className="onlyIcon">Atualizar</span></button></Link>
-                <button className="redButton" onClick={() => { removeItem(Number(params.item)); navigateTo('/itens')}}><img src="/src/img/trashIcon.svg" alt=""></img><span className="onlyIcon">Excluir</span></button>
+                <Link to={`/itens/${item.id}/edit`}><button className="greenButton"><img src="../img/editIcon.svg" alt="" /><span className="onlyIcon">Atualizar</span></button></Link>
+                <button className="redButton" onClick={() => { removeItem(Number(params.item)); navigateTo('/itens')}}><img src="../img/trashIcon.svg" alt=""></img><span className="onlyIcon">Excluir</span></button>
             </section>
             <section>
                 <InfoItem info='Categoria: ' data={item.category}/>

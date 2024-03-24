@@ -22,7 +22,7 @@ export default function TableRowLeftItens({ onClickRemove }) {
                     }
                     }
                     >
-                        <img src="/src/img/trashIcon.svg" alt="" />
+                        <img src="../img/trashIcon.svg" alt="" />
                         <span className="onlyIcon">Excluir</span>
                     </button>
                 </td>
