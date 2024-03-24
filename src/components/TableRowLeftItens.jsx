@@ -2,7 +2,7 @@ import removeItem from "/src/functions/removeItem";
 import { Link } from 'react-router-dom'
 
 export default function TableRowLeftItens({ onClickRemove }) {
-    let database = JSON.parse(localStorage.getItem('database')); 
+    let database = JSON.parse(localStorage.getItem('database')) || []; 
 
     return (
         <>
