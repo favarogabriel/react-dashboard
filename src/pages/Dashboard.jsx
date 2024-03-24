@@ -4,7 +4,7 @@ import '/src/dashboard.css'
 import { Link } from 'react-router-dom';
 
 export default function Dashboard() {
-    let database = JSON.parse(localStorage.getItem('database'));
+    let database = JSON.parse(localStorage.getItem('database')) || [];
 
     let totalQuantity = database.reduce((accum, value) => accum + Number(value.quantity), 0)
     let stockFinishing = database.filter((el) => el.quantity < 10);
