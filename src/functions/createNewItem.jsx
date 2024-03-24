@@ -31,6 +31,6 @@ export default function createNewItem() {
         database.push(itemData);
         localStorage.setItem('database', JSON.stringify(database));
     } else if (database && !valueVerifier) {
-        alert('Todos os campos devem ser preenchidos');
+        window.alert('Todos os campos devem ser preenchidos');
     }
 }

@@ -4,7 +4,7 @@ import '/src/dashboard.css'
 import { Link } from 'react-router-dom';
 
 export default function Dashboard() {
-    let database = JSON.parse(localStorage.getItem('database')) || [];
+    let database = JSON.parse(localStorage.getItem('database'));
 
     let totalQuantity = database.reduce((accum, value) => accum + Number(value.quantity), 0)
     let stockFinishing = database.filter((el) => el.quantity < 10);
@@ -23,8 +23,6 @@ export default function Dashboard() {
         return accum;
     }, []);
 
-    console.log(database)
-
     return (
         <>
             <Title>Dashboard</Title>
@@ -42,7 +40,7 @@ export default function Dashboard() {
                             </tr>
                         </thead>
                         <tbody>
-                            {recentItens.length < 0 ? recentItens.map((el) => (
+                            {recentItens.length > 0 ? recentItens.map((el) => (
                                 <tr key={el.id}>
                                     <td>{el.name}</td>
                                     <td><Link to={`/itens/${el.id}`}><button className="blueButton"><img src="../img/seeIcon.svg"></img><span className="onlyIcon">Ver</span></button></Link></td>
@@ -65,7 +63,7 @@ export default function Dashboard() {
                             </tr>
                         </thead>
                         <tbody>
-                            {stockFinishing < 0 ? stockFinishing.map((el) => (
+                            {stockFinishing.length > 0 ? stockFinishing.map((el) => (
                                 <tr key={el.id}>
                                     <td>{el.name}</td>
                                     <td>{el.quantity}</td>
