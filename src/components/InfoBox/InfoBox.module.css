@@ -1,0 +1,11 @@
+.wrapperInfoBox {
+    background-color: rgb(26, 26, 26);
+    text-align: center;
+    padding: 15px;
+    border-radius: 16px;
+    box-shadow: 1px 1px 5px black;
+}
+
+.numberInfoBox {
+    font-size: 40px;
+}

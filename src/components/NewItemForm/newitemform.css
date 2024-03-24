@@ -1,0 +1,100 @@
+form {
+    display: grid;
+    grid-template-areas: "1fr 1fr 1fr 1fr";
+    gap: 16px;
+    width: 900px;
+    margin: 0 auto;
+    grid-template-areas: 
+    "name quantity price category"
+    "description description description description";
+}
+
+form > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.nameForm {
+    grid-area: name;
+}
+
+.quantityForm {
+    grid-area: quantity;
+}
+
+.priceForm {
+    grid-area: price;
+}
+
+.categoryForm {
+    grid-area: category;
+}
+
+.descriptionForm {
+    grid-area: description;
+}
+
+form > button {
+    width: 100px;
+}
+
+input, textarea, select, option {
+    background-color: rgb(61, 61, 61);
+    color: #bebebe;
+    border: none;
+}
+
+input, select, option {
+    height: 30px;
+    border-radius: 5px;
+    font-family: 'Poppins';
+    padding-left: 5px;
+}
+
+textarea {
+    border-radius: 5px;
+    font-family: 'Poppins';
+    padding-left: 5px;
+    padding-top: 5px;
+    min-height: 100px;
+    max-height: 100px;
+    min-width: 100%;
+    max-width: 900px;
+}
+
+@media (max-width: 935px) {
+    form {
+        width: 300px;
+        place-content: center;
+        grid-template-areas: 
+        "name quantity price category"
+        "description description description description";
+    }
+}
+
+@media (max-width: 753px) {
+    form {
+        place-content: center;
+        grid-template-areas: 
+        "name quantity"
+        "price category"
+        "description description";
+    }
+}
+
+@media (max-width: 425px) {
+    form {
+        place-content: center;
+        grid-template-areas: 
+        "name"
+        "quantity"
+        "price"
+        "category"
+        "description";
+        width: 250px;
+    }
+
+    form > button {
+        width: 100%;
+    }
+}

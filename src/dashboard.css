@@ -1,0 +1,52 @@
+.dashContainer {
+    display: grid;
+    grid-template-areas: "1fr 1fr 1fr 1fr";
+    grid-template-areas: 
+    "infoBox infoBox infoBox infoBox"
+    "sectionOne sectionOne sectionTwo sectionTwo";
+    gap: 30px;
+}
+
+.sectionOne {
+    grid-area: sectionOne;
+}
+
+.sectionTwo {
+    grid-area: sectionTwo;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background-color: rgb(26, 26, 26);
+    height: 50px;
+    text-align: left;
+}
+
+th, td {
+    padding: 10px;
+}
+
+@media (max-width: 775px) {
+    .dashContainer {
+        grid-template-areas: "1fr 1fr";
+        grid-template-areas: 
+        "infoBox infoBox"
+        "infoBox infoBox"
+        "sectionOne sectionOne"
+        "sectionTwo sectionTwo";
+    }
+}
+
+@media (max-width: 425px) {
+    .dashContainer {
+        gap: 15px;
+    }
+
+    th {
+        font-size: 12px;
+    }
+}
