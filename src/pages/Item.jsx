@@ -7,7 +7,7 @@ import removeItem from "/src/functions/removeItem";
 export default function Item() {
     const params = useParams();
 
-    let database = JSON.parse(localStorage.getItem('database')); 
+    let database = JSON.parse(localStorage.getItem('database')) || []; 
     let item = database.find((el) => el.id === Number(params.item));
     const navigateTo = useNavigate();
 

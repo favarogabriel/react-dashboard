@@ -1,5 +1,5 @@
 export default function createNewItem() {
-    let database = JSON.parse(localStorage.getItem('database'));
+    let database = JSON.parse(localStorage.getItem('database')) || [];
 
     const name = document.getElementById('name').value;
     const quantity = document.getElementById('quantity').value;

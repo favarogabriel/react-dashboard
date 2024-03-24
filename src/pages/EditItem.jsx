@@ -6,7 +6,7 @@ import '/src/components/Title/Title'
 export default function EditItem() {
     const params = useParams();
 
-    let database = JSON.parse(localStorage.getItem('database'));
+    let database = JSON.parse(localStorage.getItem('database')) || [];
 
     let item = database.find((el) => el.id === Number(params.item));
 

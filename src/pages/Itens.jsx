@@ -6,7 +6,7 @@ import TableRowLeftItens from "/src/components/TableRowLeftItens";
 
 
 export default function Itens() {
-    let database = JSON.parse(localStorage.getItem('database')); 
+    let database = JSON.parse(localStorage.getItem('database')) || []; 
     const [tableRowsLeft, setTableRowsLeft] = useState(<TableRowLeftItens onClickRemove={onClickRemove}/>)
 
     function onClickRemove() {
